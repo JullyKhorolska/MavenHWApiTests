@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-public class UserApiTest {
+public class UserApiTestRegresIn {
     @BeforeAll
     public static void setBaseSpec(){
         BaseApiTest.setBaseRestAssuredSpec();
@@ -90,7 +90,7 @@ public class UserApiTest {
                 .extract()
                 .jsonPath()
                 .get("token");
-        System.out.println("token: " + token);
+        Assertions.assertEquals(token,"QpwL5tke4Pnpja7X4");
     }
 }
 
